@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<html>
+<head>
+<style>
+body {
+  background-color: rgb(150, 150, 250);
+}
+h1 {text-align: center;}
+p {style="color:white";}
+h1{style="color:yellow";}
+h2{style="color:white";}
+p {text-align: center;}
+div {text-align: center;}
+
+
+div.absolute1 {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  width: 200px;
+  height: 100px;
+  padding: 10px
+  
+}
+
+div.absolute2 {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  width: 200px;
+  height: 100px;
+  
+}
+
+div.absolute3 {
+  position: absolute;
+  top: 120px;
+  right: 600px;
+  width: 300px;
+  height: 10px;
+  
+}
+
+div.absolute4 {
+  position: absolute;
+  top: 500px;
+  right: 230px;
+  width: 200px;
+  height: 100px;
+  
+}
+
+</style>
+</head>
+<body>
+
+
+ <div class="login">
+
+	<h1>Get Your Price</h1>
+
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+
+            <div class="absolute1">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Departure Date</h3>
+                            <!-- Departure -->
+                            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Arrival Date</h3>
+                            <!-- Arrival -->
+                            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="absolute2">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h3 class="card-title">Source</h3>
+                            <select name="Source" id="Source" required="required">
+                                <option value="Delhi">Delhi</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Chennai">Chennai</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Destination</h3>
+                            
+                            <!-- Destination -->
+                            <select name="Destination" id="Destination" required="required">
+                                <option value="Cochin">Cochin</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="New Delhi">New Delhi</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Kolkata">Kolkata</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute3">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Stopage</h3>
+                            <br>
+                            <!-- Total Stops -->
+                            <select name="stops" required="required">
+                                <option value="0">Non-Stop</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                
+                
+                
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Which Airline you want to travel?</h3>
+                            <!-- Airline -->
+                            <select name="airline" id="airline" required="required">
+                                <option value="Jet Airways">Jet Airways</option>
+                                <option value="IndiGo">IndiGo</option>
+                                <option value="Air India">Air India</option>
+                                <option value="Multiple carriers">Multiple carriers</option>
+                                <option value="SpiceJet">SpiceJet</option>
+                                <option value="Vistara">Vistara</option>
+                                <option value="Air Asia">Air Asia</option>
+                                <option value="GoAir">GoAir</option>
+                                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+                                </option>
+                                <option value="Jet Airways Business">Jet Airways Business</option>
+                                <option value="Vistara Premium economy">Vistara Premium economy</option>
+                                <option value="Trujet">Trujet</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-sm-6">
+            <!-- Submit -->
+            	<input type="submit" value="Submit" class="btn btn-primary btn-block btn-large">
+        </form>
+
+        <br>
+        <br>
+        <h1>{{ prediction_text }}</h1>
+
+        <br>
+        <br>
+        <p>©2021 Kunal Deore</p>
+
+    </div>
+
+</body>
+
+</html>
