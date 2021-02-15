@@ -14,7 +14,7 @@
 ## Demo
 Link:https://airfarepred.herokuapp.com/
 
-[![](https://imgur.com/HYiUM5F)](https://heroku.com)
+[![](https://i.imgur.com/tDGWSWC.png)](https://heroku.com)
 
 
 ## Overview
