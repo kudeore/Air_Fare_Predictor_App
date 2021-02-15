@@ -11,7 +11,7 @@ Predictions are based on the historical data used to train the model.
   * [Am I missing Something?](#Am-I-missing-Something?)
 
 
-## Demo
+## Visuals
 Link:https://airfarepred.herokuapp.com/
 
 [![](https://i.imgur.com/tDGWSWC.png)](https://heroku.com)
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ```
 
 ## Deployement on Heroku
-- Signup on heroku.come 
+- Signup on heroku.com 
 - To deploy on heroku we need heroku ctl to be downloaded 
 
 [![](https://i.imgur.com/dKmlpqX.png)](https://heroku.com)
